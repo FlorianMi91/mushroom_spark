@@ -1,0 +1,1366 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_4" xmlns:data="http://jpmml.org/jpmml-model/InlineTable" version="4.4">
+	<Header>
+		<Application name="SkLearn2PMML package" version="0.90.4"/>
+		<Timestamp>2023-02-02T15:47:17Z</Timestamp>
+	</Header>
+	<MiningBuildTask>
+		<Extension name="repr">PMMLPipeline(steps=[('regressor', DecisionTreeRegressor())])</Extension>
+	</MiningBuildTask>
+	<DataDictionary>
+		<DataField name="target" optype="continuous" dataType="double"/>
+		<DataField name="age" optype="continuous" dataType="float"/>
+		<DataField name="sex" optype="continuous" dataType="float"/>
+		<DataField name="bmi" optype="continuous" dataType="float"/>
+		<DataField name="bp" optype="continuous" dataType="float"/>
+		<DataField name="s1" optype="continuous" dataType="float"/>
+		<DataField name="s2" optype="continuous" dataType="float"/>
+		<DataField name="s3" optype="continuous" dataType="float"/>
+		<DataField name="s4" optype="continuous" dataType="float"/>
+		<DataField name="s5" optype="continuous" dataType="float"/>
+		<DataField name="s6" optype="continuous" dataType="float"/>
+	</DataDictionary>
+	<TreeModel functionName="regression" algorithmName="sklearn.tree._classes.DecisionTreeRegressor" missingValueStrategy="nullPrediction" noTrueChildStrategy="returnLastPrediction">
+		<MiningSchema>
+			<MiningField name="target" usageType="target"/>
+			<MiningField name="s5"/>
+			<MiningField name="bmi"/>
+			<MiningField name="s3"/>
+			<MiningField name="s2"/>
+			<MiningField name="sex"/>
+			<MiningField name="bp"/>
+			<MiningField name="age"/>
+			<MiningField name="s6"/>
+			<MiningField name="s1"/>
+			<MiningField name="s4"/>
+		</MiningSchema>
+		<LocalTransformations>
+			<DerivedField name="double(s5)" optype="continuous" dataType="double">
+				<FieldRef field="s5"/>
+			</DerivedField>
+			<DerivedField name="double(bmi)" optype="continuous" dataType="double">
+				<FieldRef field="bmi"/>
+			</DerivedField>
+			<DerivedField name="double(s3)" optype="continuous" dataType="double">
+				<FieldRef field="s3"/>
+			</DerivedField>
+			<DerivedField name="double(s2)" optype="continuous" dataType="double">
+				<FieldRef field="s2"/>
+			</DerivedField>
+			<DerivedField name="double(sex)" optype="continuous" dataType="double">
+				<FieldRef field="sex"/>
+			</DerivedField>
+			<DerivedField name="double(bp)" optype="continuous" dataType="double">
+				<FieldRef field="bp"/>
+			</DerivedField>
+			<DerivedField name="double(age)" optype="continuous" dataType="double">
+				<FieldRef field="age"/>
+			</DerivedField>
+			<DerivedField name="double(s6)" optype="continuous" dataType="double">
+				<FieldRef field="s6"/>
+			</DerivedField>
+			<DerivedField name="double(s1)" optype="continuous" dataType="double">
+				<FieldRef field="s1"/>
+			</DerivedField>
+			<DerivedField name="double(s4)" optype="continuous" dataType="double">
+				<FieldRef field="s4"/>
+			</DerivedField>
+		</LocalTransformations>
+		<Node score="306.0">
+			<True/>
+			<Node score="257.0">
+				<SimplePredicate field="double(s5)" operator="lessOrEqual" value="-0.0037611760199069977"/>
+				<Node score="108.0">
+					<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="0.0061888848431408405"/>
+					<Node score="230.0">
+						<SimplePredicate field="double(s3)" operator="lessOrEqual" value="0.021027816459536552"/>
+						<Node score="177.0">
+							<SimplePredicate field="double(s2)" operator="lessOrEqual" value="0.09106491878628731"/>
+							<Node score="216.0">
+								<SimplePredicate field="double(sex)" operator="lessOrEqual" value="0.003019241616129875"/>
+								<Node score="183.0">
+									<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.03493465669453144"/>
+									<Node score="69.0">
+										<SimplePredicate field="double(age)" operator="lessOrEqual" value="-0.05092128552496433"/>
+										<Node score="55.0">
+											<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.09174169600009918"/>
+										</Node>
+										<Node score="200.0">
+											<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.05042748339474201"/>
+											<Node score="150.0">
+												<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.02593033987795934"/>
+												<Node score="160.0">
+													<SimplePredicate field="double(s5)" operator="lessOrEqual" value="-0.022621357813477516"/>
+													<Node score="158.0">
+														<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.04123484715819359"/>
+													</Node>
+												</Node>
+												<Node score="142.0">
+													<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.06735141016542912"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="134.0">
+											<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.052854035049676895"/>
+										</Node>
+									</Node>
+									<Node score="42.0">
+										<SimplePredicate field="double(s1)" operator="lessOrEqual" value="0.010814615758135915"/>
+										<Node score="97.0">
+											<SimplePredicate field="double(s3)" operator="lessOrEqual" value="0.00261962681543082"/>
+											<Node score="64.0">
+												<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.016984074376523495"/>
+												<Node score="96.0">
+													<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.048711927607655525"/>
+												</Node>
+												<Node score="77.0">
+													<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.07108458876609802"/>
+													<Node score="74.0">
+														<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.008425286621786654"/>
+													</Node>
+												</Node>
+												<Node score="68.0">
+													<SimplePredicate field="double(s4)" operator="lessOrEqual" value="-0.02104282204527408"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="53.0">
+											<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.05847983993589878"/>
+											<Node score="63.0">
+												<SimplePredicate field="double(s1)" operator="lessOrEqual" value="-0.04078361578285694"/>
+												<Node score="65.0">
+													<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.059067195281386375"/>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="31.0">
+											<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.030072446214035153"/>
+										</Node>
+									</Node>
+									<Node score="128.0">
+										<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.05559176206588745"/>
+									</Node>
+								</Node>
+								<Node score="214.0">
+									<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.02977037988603115"/>
+									<Node score="181.0">
+										<SimplePredicate field="double(s1)" operator="lessOrEqual" value="-0.02152027632109821"/>
+										<Node score="190.0">
+											<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.0590671943500638"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="104.0">
+									<SimplePredicate field="double(bp)" operator="lessOrEqual" value="0.10105795785784721"/>
+									<Node score="50.0">
+										<SimplePredicate field="double(s3)" operator="lessOrEqual" value="0.009982902556657791"/>
+										<Node score="155.0">
+											<SimplePredicate field="double(bp)" operator="lessOrEqual" value="0.03220093809068203"/>
+											<Node score="135.0">
+												<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.028001392260193825"/>
+												<Node score="101.0">
+													<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.0029028295539319515"/>
+												</Node>
+											</Node>
+											<Node score="200.0">
+												<SimplePredicate field="double(s5)" operator="lessOrEqual" value="-0.03652721084654331"/>
+												<Node score="168.0">
+													<SimplePredicate field="double(s1)" operator="lessOrEqual" value="-0.0517912395298481"/>
+													<Node score="178.0">
+														<SimplePredicate field="double(s5)" operator="lessOrEqual" value="-0.04698736406862736"/>
+													</Node>
+												</Node>
+											</Node>
+											<Node score="127.0">
+												<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.013124194611009443"/>
+											</Node>
+											<Node score="146.0">
+												<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.023151838104240596"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="25.0">
+										<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.02495658677071333"/>
+									</Node>
+									<Node score="144.0">
+										<SimplePredicate field="double(s1)" operator="lessOrEqual" value="-0.01188860647380352"/>
+									</Node>
+									<Node score="79.0">
+										<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.05201296508312225"/>
+									</Node>
+									<Node score="113.0">
+										<SimplePredicate field="double(s6)" operator="lessOrEqual" value="0.011348622851073742"/>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="92.0">
+								<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.028001392260193825"/>
+								<Node score="138.0">
+									<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.04662390612065792"/>
+									<Node score="88.0">
+										<SimplePredicate field="double(s1)" operator="lessOrEqual" value="-0.04147159121930599"/>
+										<Node score="70.0">
+											<SimplePredicate field="double(s5)" operator="lessOrEqual" value="-0.062046341598033905"/>
+											<Node score="55.0">
+												<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.026833476033061743"/>
+											</Node>
+											<Node score="83.0">
+												<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.07130255922675133"/>
+											</Node>
+											<Node score="72.0">
+												<SimplePredicate field="double(age)" operator="lessOrEqual" value="-0.0581863634288311"/>
+											</Node>
+										</Node>
+										<Node score="104.0">
+											<SimplePredicate field="double(age)" operator="lessOrEqual" value="-0.030942324257921427"/>
+											<Node score="101.0">
+												<SimplePredicate field="double(s1)" operator="lessOrEqual" value="-0.0572950504720211"/>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="53.0">
+									<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.007822672137990594"/>
+									<Node score="78.0">
+										<SimplePredicate field="double(s5)" operator="lessOrEqual" value="-0.09903745353221893"/>
+									</Node>
+									<Node score="71.0">
+										<SimplePredicate field="double(s1)" operator="lessOrEqual" value="-0.07243053242564201"/>
+									</Node>
+									<Node score="55.0">
+										<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.021311018150299788"/>
+										<Node score="61.0">
+											<SimplePredicate field="double(s1)" operator="lessOrEqual" value="-0.03321587573736906"/>
+										</Node>
+									</Node>
+									<Node score="43.0">
+										<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.0072636984987184405"/>
+										<Node score="47.0">
+											<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.03854031581431627"/>
+										</Node>
+									</Node>
+									<Node score="54.0">
+										<SimplePredicate field="double(s5)" operator="lessOrEqual" value="-0.021641430910676718"/>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="199.0">
+								<SimplePredicate field="double(s3)" operator="lessOrEqual" value="0.00261962681543082"/>
+								<Node score="60.0">
+									<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.07985009625554085"/>
+									<Node score="132.0">
+										<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.011595014482736588"/>
+										<Node score="71.0">
+											<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.023077694699168205"/>
+											<Node score="160.0">
+												<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.006584467715583742"/>
+												<Node score="124.0">
+													<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.02934066392481327"/>
+													<Node score="129.0">
+														<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.05501883663237095"/>
+													</Node>
+												</Node>
+											</Node>
+										</Node>
+										<Node score="89.0">
+											<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.021834230050444603"/>
+											<Node score="51.0">
+												<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.03262709826231003"/>
+												<Node score="53.0">
+													<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.027223290875554085"/>
+												</Node>
+											</Node>
+											<Node score="71.0">
+												<SimplePredicate field="double(s4)" operator="lessOrEqual" value="0.039106005686335266"/>
+											</Node>
+										</Node>
+										<Node score="83.0">
+											<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.015248983632773161"/>
+											<Node score="77.0">
+												<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.015906263142824173"/>
+											</Node>
+										</Node>
+										<Node score="97.0">
+											<SimplePredicate field="double(bp)" operator="lessOrEqual" value="0.007532911142334342"/>
+											<Node score="111.0">
+												<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.015367357060313225"/>
+												<Node score="104.0">
+													<SimplePredicate field="double(s5)" operator="lessOrEqual" value="-0.009025436593219638"/>
+													<Node score="107.0">
+														<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.018600793555378914"/>
+													</Node>
+												</Node>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="81.0">
+										<SimplePredicate field="double(bp)" operator="lessOrEqual" value="0.008669052040204406"/>
+										<Node score="67.0">
+											<SimplePredicate field="double(s5)" operator="lessOrEqual" value="-0.035688573494553566"/>
+										</Node>
+									</Node>
+									<Node score="44.0">
+										<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.0010776976123452187"/>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="49.0">
+								<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.01446440676227212"/>
+								<Node score="135.0">
+									<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.02937891334295273"/>
+									<Node score="118.0">
+										<SimplePredicate field="double(age)" operator="lessOrEqual" value="-0.02730978513136506"/>
+										<Node score="116.0">
+											<SimplePredicate field="double(s5)" operator="lessOrEqual" value="-0.05665445886552334"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="88.0">
+									<SimplePredicate field="double(s3)" operator="lessOrEqual" value="0.011823721695691347"/>
+								</Node>
+							</Node>
+							<Node score="200.0">
+								<SimplePredicate field="double(s6)" operator="lessOrEqual" value="0.02170389099046588"/>
+								<Node score="219.0">
+									<SimplePredicate field="double(s1)" operator="lessOrEqual" value="-0.044911473989486694"/>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="253.0">
+							<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.021834228420630097"/>
+						</Node>
+					</Node>
+					<Node score="103.0">
+						<SimplePredicate field="double(sex)" operator="lessOrEqual" value="0.003019241616129875"/>
+						<Node score="72.0">
+							<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.06279108859598637"/>
+							<Node score="137.0">
+								<SimplePredicate field="double(age)" operator="lessOrEqual" value="-0.0999605543911457"/>
+							</Node>
+							<Node score="85.0">
+								<SimplePredicate field="double(s5)" operator="lessOrEqual" value="-0.06470353901386261"/>
+								<Node score="90.0">
+									<SimplePredicate field="double(s5)" operator="lessOrEqual" value="-0.07443444430828094"/>
+								</Node>
+							</Node>
+							<Node score="96.0">
+								<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.08313456922769547"/>
+								<Node score="72.0">
+									<SimplePredicate field="double(s3)" operator="lessOrEqual" value="0.04864010028541088"/>
+								</Node>
+							</Node>
+							<Node score="37.0">
+								<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.028994560532737523"/>
+								<Node score="59.0">
+									<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.06440780684351921"/>
+									<Node score="57.0">
+										<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.0681801475584507"/>
+										<Node score="48.0">
+											<SimplePredicate field="double(s5)" operator="lessOrEqual" value="-0.007562382146716118"/>
+											<Node score="51.0">
+												<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.07788045704364777"/>
+											</Node>
+											<Node score="49.0">
+												<SimplePredicate field="double(s3)" operator="lessOrEqual" value="0.048640099354088306"/>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="59.0">
+							<SimplePredicate field="double(bp)" operator="lessOrEqual" value="0.0253152372315526"/>
+							<Node score="97.0">
+								<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.013211732730269432"/>
+								<Node score="118.0">
+									<SimplePredicate field="double(s5)" operator="lessOrEqual" value="-0.011400050949305296"/>
+									<Node score="90.0">
+										<SimplePredicate field="double(age)" operator="lessOrEqual" value="-0.040023669600486755"/>
+										<Node score="152.0">
+											<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.08069701120257378"/>
+											<Node score="143.0">
+												<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.07770667783915997"/>
+											</Node>
+										</Node>
+										<Node score="111.0">
+											<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.04446828179061413"/>
+											<Node score="128.0">
+												<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.031491804867982864"/>
+											</Node>
+											<Node score="99.0">
+												<SimplePredicate field="double(s1)" operator="lessOrEqual" value="-0.030463969334959984"/>
+											</Node>
+											<Node score="115.0">
+												<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.05524640344083309"/>
+											</Node>
+										</Node>
+										<Node score="94.0">
+											<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.01599897537380457"/>
+											<Node score="97.0">
+												<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.018850190564990044"/>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="158.0">
+										<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.0304567264392972"/>
+										<Node score="89.0">
+											<SimplePredicate field="double(s6)" operator="lessOrEqual" value="0.04241442494094372"/>
+											<Node score="40.0">
+												<SimplePredicate field="double(s3)" operator="lessOrEqual" value="0.02655027247965336"/>
+											</Node>
+											<Node score="114.0">
+												<SimplePredicate field="double(s1)" operator="lessOrEqual" value="-0.0552311223000288"/>
+												<Node score="125.0">
+													<SimplePredicate field="double(age)" operator="lessOrEqual" value="-0.012779632292222232"/>
+												</Node>
+											</Node>
+											<Node score="75.0">
+												<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.003566791128832847"/>
+												<Node score="52.0">
+													<SimplePredicate field="double(s5)" operator="lessOrEqual" value="-0.06927045434713364"/>
+												</Node>
+												<Node score="60.0">
+													<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.024643437936902046"/>
+													<Node score="64.0">
+														<SimplePredicate field="double(s3)" operator="lessOrEqual" value="0.10386466607451439"/>
+														<Node score="65.0">
+															<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.05699614202603698"/>
+														</Node>
+													</Node>
+												</Node>
+												<Node score="72.0">
+													<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.028048953972756863"/>
+												</Node>
+											</Node>
+											<Node score="87.0">
+												<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.01809694431722164"/>
+												<Node score="96.0">
+													<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.03854031674563885"/>
+													<Node score="93.0">
+														<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.03493465483188629"/>
+													</Node>
+												</Node>
+											</Node>
+											<Node score="72.0">
+												<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.05805486813187599"/>
+												<Node score="87.0">
+													<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.08555081486701965"/>
+												</Node>
+												<Node score="63.0">
+													<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.01944182626903057"/>
+													<Node score="65.0">
+														<SimplePredicate field="double(s4)" operator="lessOrEqual" value="-0.05794394388794899"/>
+													</Node>
+													<Node score="64.0">
+														<SimplePredicate field="double(s3)" operator="lessOrEqual" value="0.05416255630552769"/>
+													</Node>
+												</Node>
+											</Node>
+										</Node>
+									</Node>
+									<Node score="179.0">
+										<SimplePredicate field="double(s3)" operator="lessOrEqual" value="0.057844193652272224"/>
+									</Node>
+									<Node score="92.0">
+										<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.01944182626903057"/>
+										<Node score="84.0">
+											<SimplePredicate field="double(s6)" operator="lessOrEqual" value="0.009277569595724344"/>
+										</Node>
+										<Node score="98.0">
+											<SimplePredicate field="double(s3)" operator="lessOrEqual" value="0.09834221005439758"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="148.0">
+									<SimplePredicate field="double(s2)" operator="lessOrEqual" value="0.004635943099856377"/>
+									<Node score="168.0">
+										<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.02800139266764745"/>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="81.0">
+								<SimplePredicate field="double(s5)" operator="lessOrEqual" value="-0.03849617950618267"/>
+								<Node score="49.0">
+									<SimplePredicate field="double(s1)" operator="lessOrEqual" value="0.021822238340973854"/>
+									<Node score="60.0">
+										<SimplePredicate field="double(age)" operator="lessOrEqual" value="-0.007330824621021748"/>
+										<Node score="68.0">
+											<SimplePredicate field="double(age)" operator="lessOrEqual" value="-0.07816532254219055"/>
+										</Node>
+										<Node score="61.0">
+											<SimplePredicate field="double(s3)" operator="lessOrEqual" value="0.06336664967238903"/>
+										</Node>
+									</Node>
+									<Node score="39.0">
+										<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.01023860927671194"/>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="113.0">
+								<SimplePredicate field="double(s1)" operator="lessOrEqual" value="0.017006403300911188"/>
+								<Node score="88.0">
+									<SimplePredicate field="double(s6)" operator="lessOrEqual" value="0.003064409364014864"/>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="182.0">
+							<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.03701280243694782"/>
+						</Node>
+					</Node>
+					<Node score="53.0">
+						<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.005383060371968895"/>
+						<Node score="65.0">
+							<SimplePredicate field="double(s3)" operator="lessOrEqual" value="0.03391354810446501"/>
+							<Node score="77.0">
+								<SimplePredicate field="double(age)" operator="lessOrEqual" value="-0.06545144133269787"/>
+							</Node>
+							<Node score="71.0">
+								<SimplePredicate field="double(s2)" operator="lessOrEqual" value="0.02138938568532467"/>
+							</Node>
+						</Node>
+						<Node score="45.0">
+							<SimplePredicate field="double(age)" operator="lessOrEqual" value="-0.030942324548959732"/>
+							<Node score="42.0">
+								<SimplePredicate field="double(s1)" operator="lessOrEqual" value="-0.00913670053705573"/>
+								<Node score="39.0">
+									<SimplePredicate field="double(s6)" operator="lessOrEqual" value="0.04862758610397577"/>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="63.0">
+							<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.0201027849689126"/>
+						</Node>
+						<Node score="51.0">
+							<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.05699614156037569"/>
+						</Node>
+						<Node score="52.0">
+							<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.007290858309715986"/>
+						</Node>
+					</Node>
+					<Node score="63.0">
+						<SimplePredicate field="double(s6)" operator="lessOrEqual" value="0.005135462852194905"/>
+						<Node score="47.0">
+							<SimplePredicate field="double(s5)" operator="lessOrEqual" value="-0.08332215622067451"/>
+						</Node>
+						<Node score="75.0">
+							<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.009361911041196436"/>
+							<Node score="91.0">
+								<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.048711925745010376"/>
+							</Node>
+							<Node score="80.0">
+								<SimplePredicate field="double(s5)" operator="lessOrEqual" value="-0.06484027206897736"/>
+							</Node>
+							<Node score="77.0">
+								<SimplePredicate field="double(s4)" operator="lessOrEqual" value="-0.05794394388794899"/>
+							</Node>
+						</Node>
+						<Node score="66.0">
+							<SimplePredicate field="double(s1)" operator="lessOrEqual" value="0.026638075709342957"/>
+						</Node>
+					</Node>
+					<Node score="102.0">
+						<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.05442232824862003"/>
+						<Node score="104.0">
+							<SimplePredicate field="double(s1)" operator="lessOrEqual" value="-0.019456346984952688"/>
+						</Node>
+					</Node>
+				</Node>
+				<Node score="246.0">
+					<SimplePredicate field="double(age)" operator="lessOrEqual" value="-0.07998159155249596"/>
+					<Node score="302.0">
+						<SimplePredicate field="double(s4)" operator="lessOrEqual" value="-0.02104282204527408"/>
+					</Node>
+				</Node>
+				<Node score="69.0">
+					<SimplePredicate field="double(bp)" operator="lessOrEqual" value="0.009822407271713018"/>
+					<Node score="187.0">
+						<SimplePredicate field="double(s1)" operator="lessOrEqual" value="-0.047663379460573196"/>
+						<Node score="210.0">
+							<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.04526320844888687"/>
+							<Node score="182.0">
+								<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.05971606448292732"/>
+							</Node>
+							<Node score="201.0">
+								<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.059067193418741226"/>
+							</Node>
+						</Node>
+						<Node score="136.0">
+							<SimplePredicate field="double(s1)" operator="lessOrEqual" value="-0.05247921496629715"/>
+							<Node score="142.0">
+								<SimplePredicate field="double(age)" operator="lessOrEqual" value="-0.023677248042076826"/>
+							</Node>
+						</Node>
+					</Node>
+					<Node score="110.0">
+						<SimplePredicate field="double(s2)" operator="lessOrEqual" value="0.0433097779750824"/>
+						<Node score="182.0">
+							<SimplePredicate field="double(s4)" operator="lessOrEqual" value="-0.01200204819906503"/>
+							<Node score="103.0">
+								<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-5.061458214186132E-4"/>
+								<Node score="55.0">
+									<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.062477463856339455"/>
+								</Node>
+								<Node score="85.0">
+									<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.012430647853761911"/>
+									<Node score="95.0">
+										<SimplePredicate field="double(age)" operator="lessOrEqual" value="-0.025493516586720943"/>
+									</Node>
+									<Node score="90.0">
+										<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.04526320844888687"/>
+									</Node>
+								</Node>
+								<Node score="129.0">
+									<SimplePredicate field="double(s1)" operator="lessOrEqual" value="0.0011829459108412266"/>
+								</Node>
+							</Node>
+							<Node score="141.0">
+								<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.0031487508676946163"/>
+								<Node score="121.0">
+									<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.019946210319176316"/>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="147.0">
+							<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.009015598800033331"/>
+							<Node score="167.0">
+								<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="0.03906215354800224"/>
+								<Node score="184.0">
+									<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.02800139266764745"/>
+								</Node>
+								<Node score="172.0">
+									<SimplePredicate field="double(s6)" operator="lessOrEqual" value="0.013419677095953375"/>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="140.0">
+							<SimplePredicate field="double(s5)" operator="lessOrEqual" value="-0.031659476924687624"/>
+							<Node score="144.0">
+								<SimplePredicate field="double(s1)" operator="lessOrEqual" value="0.0025588986463844776"/>
+								<Node score="145.0">
+									<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="0.03906215354800224"/>
+								</Node>
+							</Node>
+						</Node>
+					</Node>
+					<Node score="96.0">
+						<SimplePredicate field="double(s4)" operator="lessOrEqual" value="0.061062172055244446"/>
+						<Node score="91.0">
+							<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.037809436209499836"/>
+						</Node>
+					</Node>
+				</Node>
+				<Node score="178.0">
+					<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="0.03906215354800224"/>
+					<Node score="118.0">
+						<SimplePredicate field="double(s2)" operator="lessOrEqual" value="0.013404100202023983"/>
+						<Node score="70.0">
+							<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.007290857844054699"/>
+							<Node score="52.0">
+								<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.030436684377491474"/>
+							</Node>
+						</Node>
+						<Node score="170.0">
+							<SimplePredicate field="double(s1)" operator="lessOrEqual" value="-0.08481410890817642"/>
+						</Node>
+						<Node score="127.0">
+							<SimplePredicate field="double(s1)" operator="lessOrEqual" value="-0.036655756644904613"/>
+						</Node>
+						<Node score="113.0">
+							<SimplePredicate field="double(sex)" operator="lessOrEqual" value="0.003019241616129875"/>
+						</Node>
+					</Node>
+					<Node score="244.0">
+						<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.048923300579190254"/>
+					</Node>
+					<Node score="191.0">
+						<SimplePredicate field="double(s4)" operator="lessOrEqual" value="-0.02104282204527408"/>
+					</Node>
+				</Node>
+				<Node score="293.0">
+					<SimplePredicate field="double(s1)" operator="lessOrEqual" value="-0.0201443238183856"/>
+					<Node score="263.0">
+						<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.01350401807576418"/>
+						<Node score="259.0">
+							<SimplePredicate field="double(s4)" operator="lessOrEqual" value="-0.02104282204527408"/>
+						</Node>
+					</Node>
+					<Node score="288.0">
+						<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.012106923386454582"/>
+					</Node>
+				</Node>
+				<Node score="131.0">
+					<SimplePredicate field="double(s2)" operator="lessOrEqual" value="0.016535584814846516"/>
+					<Node score="175.0">
+						<SimplePredicate field="double(age)" operator="lessOrEqual" value="-0.01459590089507401"/>
+					</Node>
+					<Node score="109.0">
+						<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.010266105411574244"/>
+					</Node>
+				</Node>
+				<Node score="198.0">
+					<SimplePredicate field="double(bp)" operator="lessOrEqual" value="0.05571561027318239"/>
+					<Node score="200.0">
+						<SimplePredicate field="double(sex)" operator="lessOrEqual" value="0.003019241616129875"/>
+					</Node>
+				</Node>
+			</Node>
+			<Node score="191.0">
+				<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="0.014811381697654724"/>
+				<Node score="120.0">
+					<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.021834230050444603"/>
+					<Node score="156.0">
+						<SimplePredicate field="double(s1)" operator="lessOrEqual" value="-0.0524792168289423"/>
+						<Node score="185.0">
+							<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.06942366808652878"/>
+							<Node score="140.0">
+								<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.05559176206588745"/>
+							</Node>
+							<Node score="178.0">
+								<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.03149180393666029"/>
+							</Node>
+						</Node>
+						<Node score="252.0">
+							<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.023545751813799143"/>
+						</Node>
+					</Node>
+					<Node score="78.0">
+						<SimplePredicate field="double(s6)" operator="lessOrEqual" value="0.04241442494094372"/>
+						<Node score="69.0">
+							<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.027040445245802402"/>
+							<Node score="153.0">
+								<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.048779530450701714"/>
+								<Node score="214.0">
+									<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.02867429470643401"/>
+									<Node score="162.0">
+										<SimplePredicate field="double(s4)" operator="lessOrEqual" value="0.015858298051171005"/>
+									</Node>
+								</Node>
+								<Node score="83.0">
+									<SimplePredicate field="double(s3)" operator="lessOrEqual" value="0.017346177948638797"/>
+									<Node score="94.0">
+										<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.07734154909849167"/>
+									</Node>
+									<Node score="86.0">
+										<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.0060111042112112045"/>
+									</Node>
+								</Node>
+								<Node score="170.0">
+									<SimplePredicate field="double(s4)" operator="lessOrEqual" value="-0.05794394388794899"/>
+								</Node>
+							</Node>
+							<Node score="102.0">
+								<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-6.128355744294822E-5"/>
+								<Node score="66.0">
+									<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.02717829030007124"/>
+									<Node score="42.0">
+										<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.021731321699917316"/>
+									</Node>
+									<Node score="74.0">
+										<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.008527988251444185"/>
+									</Node>
+									<Node score="58.0">
+										<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.039719206746667624"/>
+									</Node>
+								</Node>
+								<Node score="88.0">
+									<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.06190939247608185"/>
+								</Node>
+								<Node score="110.0">
+									<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.00460193632170558"/>
+								</Node>
+							</Node>
+							<Node score="124.0">
+								<SimplePredicate field="double(s2)" operator="lessOrEqual" value="0.017944753170013428"/>
+								<Node score="93.0">
+									<SimplePredicate field="double(age)" operator="lessOrEqual" value="-0.02730978513136506"/>
+								</Node>
+								<Node score="154.0">
+									<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.013599488884210587"/>
+								</Node>
+							</Node>
+							<Node score="102.0">
+								<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.031534538604319096"/>
+								<Node score="84.0">
+									<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.03807590622454882"/>
+									<Node score="91.0">
+										<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.04340084409341216"/>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="152.0">
+							<SimplePredicate field="double(s3)" operator="lessOrEqual" value="0.03575436770915985"/>
+							<Node score="163.0">
+								<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.09921322762966156"/>
+								<Node score="189.0">
+									<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.026684382930397987"/>
+									<Node score="209.0">
+										<SimplePredicate field="double(bp)" operator="lessOrEqual" value="0.05802232166752219"/>
+										<Node score="200.0">
+											<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.037462503649294376"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="170.0">
+									<SimplePredicate field="double(bp)" operator="lessOrEqual" value="0.035643789917230606"/>
+								</Node>
+							</Node>
+							<Node score="109.0">
+								<SimplePredicate field="double(age)" operator="lessOrEqual" value="-0.027309786470141262"/>
+							</Node>
+						</Node>
+						<Node score="90.0">
+							<SimplePredicate field="double(s2)" operator="lessOrEqual" value="0.01763160526752472"/>
+						</Node>
+					</Node>
+					<Node score="172.0">
+						<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.033325652591884136"/>
+						<Node score="206.0">
+							<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.05623859912157059"/>
+							<Node score="190.0">
+								<SimplePredicate field="double(s6)" operator="lessOrEqual" value="0.08383549377322197"/>
+								<Node score="185.0">
+									<SimplePredicate field="double(s1)" operator="lessOrEqual" value="0.031453908421099186"/>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="168.0">
+							<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.019469937309622765"/>
+						</Node>
+					</Node>
+				</Node>
+				<Node score="48.0">
+					<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.01444724015891552"/>
+					<Node score="235.0">
+						<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.045241665095090866"/>
+						<Node score="257.0">
+							<SimplePredicate field="double(s1)" operator="lessOrEqual" value="-0.024272182025015354"/>
+							<Node score="277.0">
+								<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.006507550366222858"/>
+							</Node>
+						</Node>
+						<Node score="129.0">
+							<SimplePredicate field="double(s2)" operator="lessOrEqual" value="0.029061523731797934"/>
+							<Node score="150.0">
+								<SimplePredicate field="double(s2)" operator="lessOrEqual" value="0.012777803465723991"/>
+							</Node>
+						</Node>
+					</Node>
+					<Node score="109.0">
+						<SimplePredicate field="double(s6)" operator="lessOrEqual" value="9.933559340424836E-4"/>
+						<Node score="200.0">
+							<SimplePredicate field="double(age)" operator="lessOrEqual" value="-0.0654514404013753"/>
+						</Node>
+						<Node score="139.0">
+							<SimplePredicate field="double(s3)" operator="lessOrEqual" value="0.06152583099901676"/>
+							<Node score="151.0">
+								<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.026833476033061743"/>
+							</Node>
+							<Node score="131.0">
+								<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.05387033708393574"/>
+							</Node>
+							<Node score="141.0">
+								<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.04352471278980374"/>
+							</Node>
+						</Node>
+					</Node>
+					<Node score="109.0">
+						<SimplePredicate field="double(bp)" operator="lessOrEqual" value="0.08384370431303978"/>
+						<Node score="85.0">
+							<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.004547695745714009"/>
+							<Node score="73.0">
+								<SimplePredicate field="double(bp)" operator="lessOrEqual" value="0.04597234167158604"/>
+							</Node>
+						</Node>
+						<Node score="100.0">
+							<SimplePredicate field="double(s3)" operator="lessOrEqual" value="0.021027816459536552"/>
+							<Node score="94.0">
+								<SimplePredicate field="double(s2)" operator="lessOrEqual" value="0.04017829289659858"/>
+								<Node score="91.0">
+									<SimplePredicate field="double(s6)" operator="lessOrEqual" value="0.03620126494206488"/>
+								</Node>
+							</Node>
+						</Node>
+					</Node>
+				</Node>
+				<Node score="249.0">
+					<SimplePredicate field="double(s6)" operator="lessOrEqual" value="0.03413021191954613"/>
+					<Node score="196.0">
+						<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.003148751042317599"/>
+						<Node score="138.0">
+							<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.033945513889193535"/>
+							<Node score="245.0">
+								<SimplePredicate field="double(bp)" operator="lessOrEqual" value="0.03564378898590803"/>
+								<Node score="292.0">
+									<SimplePredicate field="double(s1)" operator="lessOrEqual" value="-0.016704441513866186"/>
+									<Node score="276.0">
+										<SimplePredicate field="double(s4)" operator="lessOrEqual" value="-0.002592261880636215"/>
+									</Node>
+								</Node>
+								<Node score="214.0">
+									<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.0024336118949577212"/>
+									<Node score="206.0">
+										<SimplePredicate field="double(age)" operator="lessOrEqual" value="-0.010963361710309982"/>
+										<Node score="202.0">
+											<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.03837750665843487"/>
+										</Node>
+									</Node>
+									<Node score="219.0">
+										<SimplePredicate field="double(s3)" operator="lessOrEqual" value="0.05968501139432192"/>
+									</Node>
+								</Node>
+								<Node score="258.0">
+									<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.005384807474911213"/>
+								</Node>
+							</Node>
+							<Node score="181.0">
+								<SimplePredicate field="double(age)" operator="lessOrEqual" value="-0.0036982856690883636"/>
+							</Node>
+							<Node score="143.0">
+								<SimplePredicate field="double(bp)" operator="lessOrEqual" value="0.049415191635489464"/>
+							</Node>
+						</Node>
+						<Node score="142.0">
+							<SimplePredicate field="double(s1)" operator="lessOrEqual" value="-0.008448724169284105"/>
+							<Node score="101.0">
+								<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.011595014715567231"/>
+							</Node>
+							<Node score="126.0">
+								<SimplePredicate field="double(s1)" operator="lessOrEqual" value="-0.016704441513866186"/>
+							</Node>
+						</Node>
+						<Node score="171.0">
+							<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.03421455156058073"/>
+							<Node score="134.0">
+								<SimplePredicate field="double(s4)" operator="lessOrEqual" value="0.03430885821580887"/>
+							</Node>
+						</Node>
+						<Node score="233.0">
+							<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.04524166276678443"/>
+						</Node>
+						<Node score="185.0">
+							<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.06144272908568382"/>
+						</Node>
+						<Node score="202.0">
+							<SimplePredicate field="double(s4)" operator="lessOrEqual" value="0.015858298051171005"/>
+						</Node>
+						<Node score="197.0">
+							<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.06713621318340302"/>
+						</Node>
+					</Node>
+					<Node score="67.0">
+						<SimplePredicate field="double(s4)" operator="lessOrEqual" value="0.09999285265803337"/>
+						<Node score="235.0">
+							<SimplePredicate field="double(s1)" operator="lessOrEqual" value="0.06241284869611263"/>
+							<Node score="144.0">
+								<SimplePredicate field="double(s1)" operator="lessOrEqual" value="0.034893790259957314"/>
+								<Node score="198.0">
+									<SimplePredicate field="double(sex)" operator="lessOrEqual" value="0.003019241616129875"/>
+									<Node score="174.0">
+										<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.02354575297795236"/>
+									</Node>
+								</Node>
+								<Node score="151.0">
+									<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.025709567591547966"/>
+									<Node score="90.0">
+										<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.009015598625410348"/>
+										<Node score="111.0">
+											<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.03051511337980628"/>
+											<Node score="107.0">
+												<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.020180954597890377"/>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="131.0">
+									<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.0177204015199095"/>
+									<Node score="144.0">
+										<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.059968218207359314"/>
+									</Node>
+								</Node>
+								<Node score="164.0">
+									<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.0417084451764822"/>
+									<Node score="161.0">
+										<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.01083186804316938"/>
+									</Node>
+								</Node>
+								<Node score="150.0">
+									<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.04156002774834633"/>
+								</Node>
+							</Node>
+							<Node score="259.0">
+								<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.017629381734877825"/>
+							</Node>
+							<Node score="217.0">
+								<SimplePredicate field="double(s2)" operator="lessOrEqual" value="0.03344560228288174"/>
+							</Node>
+						</Node>
+						<Node score="131.0">
+							<SimplePredicate field="double(s3)" operator="lessOrEqual" value="0.009982902556657791"/>
+							<Node score="115.0">
+								<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.03436658508144319"/>
+								<Node score="116.0">
+									<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.0029725178610533476"/>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="95.0">
+							<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-2.7798768132925034E-4"/>
+						</Node>
+					</Node>
+					<Node score="229.0">
+						<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="0.0034943545470014215"/>
+					</Node>
+				</Node>
+				<Node score="123.0">
+					<SimplePredicate field="double(bp)" operator="lessOrEqual" value="0.028758088126778603"/>
+					<Node score="262.0">
+						<SimplePredicate field="double(s1)" operator="lessOrEqual" value="0.01150259212590754"/>
+						<Node score="220.0">
+							<SimplePredicate field="double(s6)" operator="lessOrEqual" value="0.06933811865746975"/>
+						</Node>
+					</Node>
+					<Node score="179.0">
+						<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="-0.00458923599217087"/>
+					</Node>
+					<Node score="142.0">
+						<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="0.0018776364158838987"/>
+					</Node>
+				</Node>
+				<Node score="241.0">
+					<SimplePredicate field="double(s3)" operator="lessOrEqual" value="0.057844193652272224"/>
+					<Node score="297.0">
+						<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.09273659065365791"/>
+						<Node score="292.0">
+							<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="0.002416542498394847"/>
+							<Node score="281.0">
+								<SimplePredicate field="double(s4)" operator="lessOrEqual" value="0.08966054022312164"/>
+								<Node score="283.0">
+									<SimplePredicate field="double(bp)" operator="lessOrEqual" value="0.07523657754063606"/>
+								</Node>
+							</Node>
+						</Node>
+						<Node score="311.0">
+							<SimplePredicate field="double(bp)" operator="lessOrEqual" value="0.04769377037882805"/>
+						</Node>
+					</Node>
+					<Node score="248.0">
+						<SimplePredicate field="double(s1)" operator="lessOrEqual" value="0.06722868233919144"/>
+					</Node>
+				</Node>
+			</Node>
+			<Node score="310.0">
+				<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="0.06870198622345924"/>
+				<Node score="317.0">
+					<SimplePredicate field="double(bp)" operator="lessOrEqual" value="0.016708109062165022"/>
+					<Node score="132.0">
+						<SimplePredicate field="double(s6)" operator="lessOrEqual" value="0.11283024400472641"/>
+						<Node score="259.0">
+							<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.07101312652230263"/>
+							<Node score="272.0">
+								<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.014277549926191568"/>
+							</Node>
+						</Node>
+						<Node score="68.0">
+							<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.06475169211626053"/>
+							<Node score="128.0">
+								<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="0.024511689320206642"/>
+								<Node score="197.0">
+									<SimplePredicate field="double(s3)" operator="lessOrEqual" value="0.01366454001981765"/>
+									<Node score="242.0">
+										<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.041708444245159626"/>
+										<Node score="265.0">
+											<SimplePredicate field="double(s1)" operator="lessOrEqual" value="0.008062710054218769"/>
+										</Node>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="141.0">
+								<SimplePredicate field="double(s4)" operator="lessOrEqual" value="0.013090714579448104"/>
+								<Node score="85.0">
+									<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.027178289368748665"/>
+									<Node score="52.0">
+										<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.023151838686317205"/>
+									</Node>
+									<Node score="99.0">
+										<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.011432965053245425"/>
+									</Node>
+									<Node score="78.0">
+										<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.007405437179841101"/>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="122.0">
+								<SimplePredicate field="double(s4)" operator="lessOrEqual" value="0.05368194915354252"/>
+								<Node score="164.0">
+									<SimplePredicate field="double(bp)" operator="lessOrEqual" value="0.004658130754251033"/>
+									<Node score="220.0">
+										<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="0.03960105963051319"/>
+										<Node score="196.0">
+											<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="0.032595280557870865"/>
+										</Node>
+									</Node>
+									<Node score="173.0">
+										<SimplePredicate field="double(s1)" operator="lessOrEqual" value="0.06034891679883003"/>
+										<Node score="180.0">
+											<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.03525360394269228"/>
+											<Node score="178.0">
+												<SimplePredicate field="double(s1)" operator="lessOrEqual" value="0.02870200388133526"/>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="150.0">
+									<SimplePredicate field="double(sex)" operator="lessOrEqual" value="0.003019241616129875"/>
+								</Node>
+							</Node>
+							<Node score="174.0">
+								<SimplePredicate field="double(s1)" operator="lessOrEqual" value="0.04658939130604267"/>
+								<Node score="137.0">
+									<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.06364985182881355"/>
+								</Node>
+							</Node>
+							<Node score="121.0">
+								<SimplePredicate field="double(sex)" operator="lessOrEqual" value="0.003019241616129875"/>
+								<Node score="122.0">
+									<SimplePredicate field="double(age)" operator="lessOrEqual" value="-0.0127796315937303"/>
+								</Node>
+							</Node>
+							<Node score="84.0">
+								<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.05260493978857994"/>
+							</Node>
+						</Node>
+						<Node score="225.0">
+							<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.07835672795772552"/>
+							<Node score="310.0">
+								<SimplePredicate field="double(s1)" operator="lessOrEqual" value="0.00531080411747098"/>
+							</Node>
+							<Node score="262.0">
+								<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.06913629546761513"/>
+							</Node>
+						</Node>
+						<Node score="192.0">
+							<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.044695137068629265"/>
+						</Node>
+					</Node>
+					<Node score="268.0">
+						<SimplePredicate field="double(s6)" operator="lessOrEqual" value="0.1293986737728119"/>
+					</Node>
+				</Node>
+				<Node score="270.0">
+					<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.07399491593241692"/>
+					<Node score="155.0">
+						<SimplePredicate field="double(bp)" operator="lessOrEqual" value="0.09589368104934692"/>
+						<Node score="283.0">
+							<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.01971717830747366"/>
+							<Node score="236.0">
+								<SimplePredicate field="double(s3)" operator="lessOrEqual" value="0.03023191075772047"/>
+								<Node score="221.0">
+									<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.004445361904799938"/>
+									<Node score="225.0">
+										<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="0.03313418757170439"/>
+									</Node>
+								</Node>
+								<Node score="248.0">
+									<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.06591849215328693"/>
+								</Node>
+							</Node>
+							<Node score="265.0">
+								<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="0.024511689320206642"/>
+							</Node>
+						</Node>
+						<Node score="139.0">
+							<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="0.018044818192720413"/>
+							<Node score="212.0">
+								<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.03971920907497406"/>
+							</Node>
+							<Node score="173.0">
+								<SimplePredicate field="double(s2)" operator="lessOrEqual" value="0.0744680529460311"/>
+							</Node>
+						</Node>
+						<Node score="186.0">
+							<SimplePredicate field="double(s6)" operator="lessOrEqual" value="0.08797760121524334"/>
+							<Node score="163.0">
+								<SimplePredicate field="double(s6)" operator="lessOrEqual" value="0.03827231749892235"/>
+								<Node score="281.0">
+									<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.048129571601748466"/>
+								</Node>
+								<Node score="151.0">
+									<SimplePredicate field="double(s2)" operator="lessOrEqual" value="0.008863447699695826"/>
+									<Node score="166.0">
+										<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="0.053612615913152695"/>
+										<Node score="178.0">
+											<SimplePredicate field="double(s1)" operator="lessOrEqual" value="0.019070332869887352"/>
+											<Node score="208.0">
+												<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.03625963628292084"/>
+												<Node score="195.0">
+													<SimplePredicate field="double(s6)" operator="lessOrEqual" value="-0.007290857611224055"/>
+												</Node>
+												<Node score="202.0">
+													<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.05457412265241146"/>
+												</Node>
+											</Node>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="275.0">
+									<SimplePredicate field="double(s1)" operator="lessOrEqual" value="0.025262121111154556"/>
+									<Node score="232.0">
+										<SimplePredicate field="double(s4)" operator="lessOrEqual" value="0.015858298051171005"/>
+										<Node score="265.0">
+											<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="0.01912263035774231"/>
+										</Node>
+										<Node score="237.0">
+											<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.01812082715332508"/>
+										</Node>
+									</Node>
+								</Node>
+								<Node score="215.0">
+									<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.03625963721424341"/>
+									<Node score="198.0">
+										<SimplePredicate field="double(s4)" operator="lessOrEqual" value="0.02157797198742628"/>
+									</Node>
+									<Node score="222.0">
+										<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="0.04552902467548847"/>
+									</Node>
+								</Node>
+							</Node>
+							<Node score="258.0">
+								<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="0.05415152199566364"/>
+								<Node score="281.0">
+									<SimplePredicate field="double(bp)" operator="lessOrEqual" value="0.025883307680487633"/>
+								</Node>
+								<Node score="232.0">
+									<SimplePredicate field="double(bp)" operator="lessOrEqual" value="0.037933286279439926"/>
+								</Node>
+								<Node score="246.0">
+									<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="0.04337340220808983"/>
+									<Node score="248.0">
+										<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.054966095834970474"/>
+									</Node>
+								</Node>
+							</Node>
+						</Node>
+					</Node>
+					<Node score="243.0">
+						<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.01697130035609007"/>
+					</Node>
+					<Node score="296.0">
+						<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="0.032595280557870865"/>
+					</Node>
+					<Node score="280.0">
+						<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.02187645621597767"/>
+					</Node>
+				</Node>
+				<Node score="217.0">
+					<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.03787839040160179"/>
+					<Node score="273.0">
+						<SimplePredicate field="double(s1)" operator="lessOrEqual" value="0.018382356502115726"/>
+					</Node>
+					<Node score="242.0">
+						<SimplePredicate field="double(bp)" operator="lessOrEqual" value="0.06606137938797474"/>
+						<Node score="245.0">
+							<SimplePredicate field="double(bp)" operator="lessOrEqual" value="0.046557627618312836"/>
+						</Node>
+					</Node>
+					<Node score="230.0">
+						<SimplePredicate field="double(s1)" operator="lessOrEqual" value="0.09405976347625256"/>
+					</Node>
+				</Node>
+				<Node score="272.0">
+					<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.07496572658419609"/>
+				</Node>
+				<Node score="303.0">
+					<SimplePredicate field="double(s6)" operator="lessOrEqual" value="0.06312496028840542"/>
+				</Node>
+			</Node>
+			<Node score="220.0">
+				<SimplePredicate field="double(s2)" operator="lessOrEqual" value="0.022485405206680298"/>
+				<Node score="261.0">
+					<SimplePredicate field="double(s5)" operator="lessOrEqual" value="0.0317942313849926"/>
+					<Node score="341.0">
+						<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.01394774322398007"/>
+						<Node score="332.0">
+							<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="0.10804212465882301"/>
+							<Node score="321.0">
+								<SimplePredicate field="double(s4)" operator="lessOrEqual" value="0.015858298051171005"/>
+							</Node>
+						</Node>
+						<Node score="336.0">
+							<SimplePredicate field="double(s4)" operator="lessOrEqual" value="0.015858298051171005"/>
+						</Node>
+						<Node score="346.0">
+							<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.01634500315412879"/>
+						</Node>
+					</Node>
+					<Node score="274.0">
+						<SimplePredicate field="double(s3)" operator="lessOrEqual" value="0.004460445838049054"/>
+					</Node>
+				</Node>
+				<Node score="295.0">
+					<SimplePredicate field="double(s4)" operator="lessOrEqual" value="0.03670743107795715"/>
+					<Node score="277.0">
+						<SimplePredicate field="double(s2)" operator="lessOrEqual" value="0.006827982608228922"/>
+						<Node score="275.0">
+							<SimplePredicate field="double(s6)" operator="lessOrEqual" value="0.021703890524804592"/>
+							<Node score="281.0">
+								<SimplePredicate field="double(s1)" operator="lessOrEqual" value="-0.057295050006359816"/>
+							</Node>
+						</Node>
+						<Node score="258.0">
+							<SimplePredicate field="double(s2)" operator="lessOrEqual" value="-0.027931496500968933"/>
+							<Node score="263.0">
+								<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.034196751192212105"/>
+							</Node>
+						</Node>
+						<Node score="270.0">
+							<SimplePredicate field="double(s6)" operator="lessOrEqual" value="0.03827231749892235"/>
+						</Node>
+						<Node score="275.0">
+							<SimplePredicate field="double(sex)" operator="lessOrEqual" value="0.003019241616129875"/>
+						</Node>
+					</Node>
+					<Node score="308.0">
+						<SimplePredicate field="double(s3)" operator="lessOrEqual" value="-0.019470199942588806"/>
+						<Node score="310.0">
+							<SimplePredicate field="double(bmi)" operator="lessOrEqual" value="0.10804212838411331"/>
+						</Node>
+					</Node>
+				</Node>
+			</Node>
+			<Node score="128.0">
+				<SimplePredicate field="double(s1)" operator="lessOrEqual" value="0.0176943801343441"/>
+			</Node>
+			<Node score="264.0">
+				<SimplePredicate field="double(s4)" operator="lessOrEqual" value="0.12656165659427643"/>
+				<Node score="180.0">
+					<SimplePredicate field="double(s6)" operator="lessOrEqual" value="0.07140917330980301"/>
+					<Node score="252.0">
+						<SimplePredicate field="double(s6)" operator="lessOrEqual" value="0.04448547773063183"/>
+						<Node score="243.0">
+							<SimplePredicate field="double(bp)" operator="lessOrEqual" value="0.0924508310854435"/>
+							<Node score="233.0">
+								<SimplePredicate field="double(s6)" operator="lessOrEqual" value="0.013419677270576358"/>
+								<Node score="237.0">
+									<SimplePredicate field="double(s1)" operator="lessOrEqual" value="0.0514052240177989"/>
+								</Node>
+							</Node>
+							<Node score="242.0">
+								<SimplePredicate field="double(s4)" operator="lessOrEqual" value="0.07120997831225395"/>
+							</Node>
+						</Node>
+					</Node>
+					<Node score="233.0">
+						<SimplePredicate field="double(age)" operator="lessOrEqual" value="0.005383061245083809"/>
+						<Node score="220.0">
+							<SimplePredicate field="double(bp)" operator="lessOrEqual" value="-0.036656079813838005"/>
+						</Node>
+					</Node>
+				</Node>
+				<Node score="279.0">
+					<SimplePredicate field="double(s4)" operator="lessOrEqual" value="0.05275942012667656"/>
+				</Node>
+			</Node>
+		</Node>
+	</TreeModel>
+</PMML>
